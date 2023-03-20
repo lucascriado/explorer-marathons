@@ -41,6 +41,7 @@ button {
     color: white;
     background-color: blueviolet;
     transition: filter .2s;
+    margin-bottom: 1.5rem;
 }
 
 button:hover {
@@ -55,6 +56,16 @@ button {
     padding: 20px;
     font-size: 20px;
     border-radius: 4px;
+}
+
+#semresposta { 
+    color: red;
+    font-size: 0.9rem;
+    transition: opacity 1s;
+}
+
+#resposta {
+    transition: opacity 1s;
 }
 
 #resposta div {
