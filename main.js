@@ -1,3 +1,7 @@
+const elementRes = document.querySelector('#resposta')
+const pergunta = document.querySelector('#input')
+const semValor = document.querySelector('#semresposta')
+
 const respostas = [
     "Certeza!",
     "Não tenho tanta certeza.",
@@ -20,7 +24,28 @@ const respostas = [
     "Sinais apontam que sim.",
 ]
 
-// gerar números aleatórios
-const totalRespostas = respostas.length
-const numeroAleatorio = Math.floor(Math.random() * totalRespostas)
-console.log(numeroAleatorio)
+//clicar em fazer pergunta
+function fazerPergunta() {
+
+    if(pergunta.value == ""){
+        semValor.innerHTML = "Por favor, digite sua pergunta"
+        setTimeout(function() {
+            semValor.style.opacity = 0;
+        }, 1500)
+        return
+    }
+
+    const perguntaResposta = "<div>" + pergunta.value + "</div>"
+
+    const totalRespostas = respostas.length
+    const numeroAleatorio = Math.floor(Math.random() * totalRespostas)
+    elementRes.innerHTML =  perguntaResposta + respostas[numeroAleatorio]
+
+    setTimeout(function() {
+        elementRes.style.opacity = 0;
+    }, 2000)
+
+    setTimeout(() => {
+        document.location.reload();
+      }, 2000);
+}
