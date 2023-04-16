@@ -1,5 +1,7 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -14,7 +16,12 @@ body {
 }
 
 .container {
-    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    align-items: center;
+    height: 100%;
     width: 80%;
     max-width: 400px;
     margin-inline: auto;
@@ -75,8 +82,16 @@ button {
     margin-bottom: 10px;
 }
 
+img {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+}
+
 @media (max-width: 1200px){
-    .container {
-        margin-top: 350px;
+    img {
+        object-fit: cover;
+        width: 7rem;
+        height: 7rem;
     }
 }
