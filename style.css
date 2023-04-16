@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    margin-top: 100px;
+    margin-top: 250px;
     width: 80%;
     max-width: 400px;
     margin-inline: auto;
@@ -73,4 +73,10 @@ button {
     font-weight: normal;
     opacity:  0.9;
     margin-bottom: 10px;
+}
+
+@media (max-width: 1200px){
+    .container {
+        margin-top: 350px;
+    }
 }
